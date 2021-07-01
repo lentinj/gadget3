@@ -231,7 +231,6 @@ tmb_param[grepl('^lingmat\\.M\\.', rownames(tmb_param)),]$optimise <- FALSE
 tmb_param[grepl('^lingimm\\.init\\.sd', rownames(tmb_param)),]$optimise <- FALSE
 tmb_param[grepl('^lingmat\\.init\\.sd', rownames(tmb_param)),]$optimise <- FALSE
 
-
 # Compile and generate TMB ADFun (see ?TMB::MakeADFun)
 ling_model_tmb <- g3_tmb_adfun(tmb_ling,tmb_param)
 # writeLines(TMB::gdbsource(g3_tmb_adfun(tmb_ling, tmb_param, compile_flags = "-g", output_script = TRUE)))
